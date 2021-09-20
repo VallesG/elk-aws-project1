@@ -4,15 +4,15 @@
   become: true
   tasks:
     # Use command module
-  - name: Download metricbeat
+ # - name: Download metricbeat
     command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
 
     # Use command module
-  - name: install metricbeat
+ # - name: install metricbeat
     command: sudo yum rpm -vi metricbeat-7.4.0-amd64.deb
 
     # Use copy module
-  - name: drop in metricbeat config
+ # - name: drop in metricbeat config
     copy:
       src: /etc/ansible/files/metricbeat-config.yml
       dest: /etc/metricbeat/metricbeat.yml
