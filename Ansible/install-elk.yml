@@ -1,4 +1,4 @@
-  GNU nano 4.8                                                                                                  install-elk.yaml                                                                                                             ---
+---                                                                                                                                                                              ---
   - name: install elk
     hosts: elk
     remote_user: ubuntu
