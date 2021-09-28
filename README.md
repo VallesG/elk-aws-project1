@@ -61,10 +61,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible |  Allowed IP Address |
 |------------|---------------------|---------------------|
-| Jumpbox    | Yes                 | 172.31.25.63        |
-| webserver1 | No                  | 172.31.26.184       |
-| webserver2 | No                  | 172.31.94.129       |
-| Elk2       | No                  | 172.31.46.71        |
+| Jumpbox    | No                  | Private IP	         |
+| webserver1 | Yes                 | 172.31.25.63        |
+| webserver2 | Yes                 | 172.31.25.63        |
+| Elk2       | No                  | 172.31.25.63        |
 
 
 ### Elk Configuration
@@ -117,15 +117,13 @@ Update the filebeat_configuration.file to include the private IP address Elk ser
 
 Run the playbook, and navigate to Kibana(http://[Elk Sever IP]:5601)  to check that the installation worked as expected.
 
-Answer the following questions to fill in the blanks:
-
 Which file is the playbook? filebeat-playbook.yml
 
 Where do you copy it? /etc/ansible
 
 Which file do you update to make Ansible run the playbook on a specific machine? /etc/ansible/hosts
 
-How do you specify which machine to install the ELK server on versus which to install Filebeat on? Editing thr hosts file in /etc/ansible allows you to specify by private IP
+How do you specify which machine to install the ELK server on versus which to install Filebeat on? Editing the hosts file in /etc/ansible allows you to specify by private IP
 
 Which URL do you navigate to in order to check that the ELK server is running? 
 172.31.46.71:5601	
